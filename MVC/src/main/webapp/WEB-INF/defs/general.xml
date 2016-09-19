@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+				<!-- Some templates -->
+	<definition name="common" template="/WEB-INF/layout/classic.jsp">
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+		<put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+	</definition>
+	
+	<definition name="index" extends="common">
+		<put-attribute name="title" value="index" />
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+	</definition>
+	
+	<definition name="brand" extends="common">
+		<put-attribute name="title" value="brand" />
+		<put-attribute name="body" value="/WEB-INF/views/brand.jsp" />
+	</definition>
+	
+	<definition name="budget" extends="common">
+		<put-attribute name="title" value="budget" />
+		<put-attribute name="body" value="/WEB-INF/views/budget.jsp" />
+	</definition>
+	
+	<definition name="screensize" extends="common">
+		<put-attribute name="title" value="screensize" />
+		<put-attribute name="body" value="/WEB-INF/views/screensize.jsp" />
+	</definition>
+	
+	<definition name="smartphone" extends="common">
+		<put-attribute name="title" value="smartphone" />
+		<put-attribute name="body" value="/WEB-INF/views/smartphone.jsp" />
+	</definition>
+	
+	<definition name="admin*" extends="common">
+		<put-attribute name="title" value="{1}"/>
+		<put-attribute name="body" value="/WEB-INF/admin/admin{1}.jsp" />
+	</definition>
+</tiles-definitions>
