@@ -1,13 +1,12 @@
 package ua.service;
 
-import java.util.List;
-
 import ua.entity.User;
 
 public interface UserService {
 
-	public void save(String name);
-	public void delete(int id);
-	public List<User> findAll();
-	public User findOne(int id);
+	User findByLogin(String login);
+	
+	User findById(int id);
+	
+	void save(User user);
 }

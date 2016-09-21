@@ -16,6 +16,7 @@ $(function() {
 								<li><a href="/admin/budget">Budget</a></li>
 								<li><a href="/admin/screensize">Screen size</a></li>
 								<li class="active"><a href="/admin/smartphone">Smartphones</a><span	class="sr-only">(current)</span></li>
+								<li><a href="/admin/brand/smartphone">Brand and Smartphones</a></li>
 							</ul>
 						</div>
 					</div>

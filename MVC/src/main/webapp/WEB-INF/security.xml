@@ -11,11 +11,21 @@
 		<form-login login-page="/login" login-processing-url="/login" authentication-failure-url="/login?fail=true"/>
 		<logout logout-url="/logout" logout-success-url="/"/>
 		<csrf />
+		<session-management>
+			<concurrency-control expired-url="/login?expired=true" />
+		</session-management>
+		<remember-me key="myAppKey"/>
 	</http>
 	
 <!-- 	<user-service> -->
 <!-- 		<user name="admin" authorities="ROLE_ADMIN" password="admin"/> -->
 <!-- 	</user-service> -->
+
+<!-- 	<beans:bean id="userDetailsService" class="ua.service.implementation.UserServiceImpl"> -->
+<!-- 		<beans:property name="repository" ref="userRepository"/> -->
+<!-- 		<beans:property name="encoder" ref="encoder"/> -->
+<!-- 	</beans:bean> -->
+
 	<beans:bean id="encoder"
 		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
 			<beans:constructor-arg name="strength" value="5" />

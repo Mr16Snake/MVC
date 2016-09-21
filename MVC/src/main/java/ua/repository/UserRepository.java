@@ -6,4 +6,6 @@ import ua.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer>{
 
+	User findByLogin(String login);
+	
 }

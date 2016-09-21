@@ -1,7 +1,5 @@
 package ua.entity;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -12,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.Index;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -53,9 +50,6 @@ public class Smartphone {
 	private int version;
 	
 	private String path;
-	
-	@OneToMany(mappedBy="smartphone")
-	private List<Order> orders;
 
 	public int getId() {
 		return id;
@@ -172,14 +166,6 @@ public class Smartphone {
 
 	public void setPath(String path) {
 		this.path = path;
-	}
-
-	public List<Order> getOrders() {
-		return orders;
-	}
-
-	public void setOrders(List<Order> orders) {
-		this.orders = orders;
 	}
 	
 }
